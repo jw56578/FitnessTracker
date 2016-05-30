@@ -1,0 +1,75 @@
+.background-full {
+	background: url('../img/background.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-size: cover;
+	min-height: 100%;
+}
+
+.running-number {
+	font-family: 'Raleway', sans-serif;
+	font-size: 30vh;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+}
+
+.div-decount-reset-button {
+	margin: 5vh;
+}
+.div-counter-button {
+	font-family: 'Raleway', sans-serif;
+	font-size: 12vh;
+	font-weight: bold;
+	color: #08BBB7;
+	text-align: center;
+}
+
+.counter-button-count {
+	font-size: 5vh;
+	position: relative;
+	top: 0;
+	margin: 2vh;
+	padding: 15vh 30vw;
+}
+.counter-button-decount {
+	position: relative;
+	top: 0;
+	font-size: 3vh;
+	padding: 2vh 8vw;
+}
+.counter-button-reset {
+	position: relative;
+	top: 0;
+	font-size: 3vh;
+	padding: 2vh 15vw;
+}
+
+.border-counter-button {
+	text-decoration: none;
+	border: 0vh solid;
+	border-bottom-width: 1vh;
+	border-radius: 1vh;
+	cursor: pointer;
+	outline: none;
+}
+
+.counter-button-count.teal,
+.counter-button-decount.teal {
+	color: #fff;
+	border-color: #04A5A1;
+	background-color: #08BBB7;
+}
+.counter-button-reset.teal {
+	color: #fff;
+	border-color: darkred;
+	background-color: red;
+}
+
+.counter-button-count:active,
+.counter-button-decount:active,
+.counter-button-reset:active{
+	position: relative;
+	top: 0.5vh;
+}

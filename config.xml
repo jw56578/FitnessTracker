@@ -1,0 +1,28 @@
+<widget xmlns			= "http://www.w3.org/ns/widgets" 
+		xmlns:gap		= "http://phonegap.com/ns/1.0" 
+		xmlns:android   = "http://schemas.android.com/apk/res/android"
+		id				= "com.simpleappsgn.icountertap" 
+		version			= "2.0.0">
+		
+	<name>Webpack React Cordova Starter</name>
+	
+	<description>What is the most basic code needed to get a phone gap app to work with plugins.</description>
+
+	<icon src="icon.png"/>
+	
+	<platform name="android">
+		<preference name="fullscreen" value="true" />
+		<preference name="orientation" value="portrait" />
+		<preference name="phonegap-version" value="cli-5.1.1" />
+	</platform>
+	
+	<plugin name="cordova-plugin-vibration" />
+	<gap:plugin name="org.apache.cordova.dialogs" />
+
+	<supports-screens android:anyDensity="true" android:resizeable="true"
+		android:smallScreens="true"
+		android:normalScreens="true"
+		android:largeScreens="true"
+		android:xlargeScreens="true" />
+  
+</widget>
