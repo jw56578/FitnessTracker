@@ -58,6 +58,8 @@ class App extends Component
         
     }
     lap(){
+        if(!this.state.repCount)
+            return;
         var as = this.state.currentActivitySet;
         as.reps.push({number:this.state.repCount,elapsedSeconds:this.state.elapsedMilliseconds/1000});
         save('activitySet',as); 
@@ -68,12 +70,13 @@ class App extends Component
         var btnSetupActivites = this.state.activities && this.state.activities.length > 0 ? '': <button onClick={()=>this.setupActivities()} style={buttonStyle}>Setup Activities</button>;
         var txtReps = this.state.currentActivitySet ? <input type="number" value={this.state.repCount} onChange={(e)=>this.setState({repCount:e.target.value})} style={{width:'100%'}}></input>: '';
         var btnLap = this.state.currentActivitySet ? <button onClick={this.lap} style={buttonStyle}>Lap</button> : '';
+        var btnStartActivity = this.state.currentSession ? <button onClick={this.startActivity} style={buttonStyle}>Start Activity</button> : '';
         return (
             <div style={{height:'100%'}}>
                 <div style={{position:'relative',height:'100%',minHeight:'100%',margin: '0 auto -4em'}}>
                     {btnSetupActivites}
                     <button onClick={this.createNewSession} style={buttonStyle}>New Session</button>
-                    <button onClick={this.startActivity} style={buttonStyle}>Start Activity</button>
+                    {btnStartActivity}
                     {btnLap}
                     {txtReps}
                     Current Session: {this.state.currentSession ? this.state.currentSession.name : '' }
